@@ -5,8 +5,11 @@ function LoginPage({user, setUser}) {
     const [email, setEmail] = useState('')
 
     const handleSubmit = (event) =>{
+        console.log(user)
         event.preventDefault()
         setUser(email)
+        user = email
+        console.log(user)
     }
 
     return ( 
