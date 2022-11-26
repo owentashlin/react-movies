@@ -4,7 +4,7 @@ import MovieCard from "../../components/MovieCard"
 function Movies() {
     return ( 
         <div className="movie-page">
-        <h1>Movies</h1>
+        <h1>All Movies</h1>
         <MovieCard />
         </div>
      );

@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import NavBar from '../../components/NavBar'
 import LoginPage from '../../components/LoginPage'
 import Movies from './MoviesListPage'
+import Actors from './ActorsListPage'
 import { movies } from "../../data.js"
 
 
@@ -13,17 +14,19 @@ function App() {
 const [user, setUser] = useState(null)
 
 return (
-    <div className="App">
+    <main className="App">
       {user ? (
-    <>
-    <NavBar user={user}/>
-    <Movies movies={movies}/>
-    
-    </>
-  ) : (
-  <LoginPage user={user} setUser={setUser}/>
-)}
-</div>
+        <div>
+        <NavBar user={user} />
+        <Routes>
+          <Route path='/' element={<Movies />} />
+          <Route path='/actors' element={<Actors />} />
+        </Routes>
+        </div>
+        ) : (
+      <LoginPage user={user} setUser={setUser} />
+        )}
+    </main>
 )
 }
 

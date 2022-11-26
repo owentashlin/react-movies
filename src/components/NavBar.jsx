@@ -6,9 +6,9 @@ function NavBar ({user}) {
     <>
     <nav className='NavBar'>
         <h4>Welcome {user}</h4>
-      <h4>Movies</h4>
-      {/* <Link to='./MoviesListPage'></Link> */}
-      <h4>Actors</h4>
+      <Link to='/'>All Movies</Link>
+      <br></br>
+      <Link to='/actors'>Actors</Link>
       <hr></hr>
     </nav>
     </>
