@@ -1,10 +1,11 @@
 import ActorCard from "../../components/ActorsCard";
+import { movies } from "../../data";
 
 function Actors() {
     return ( 
         <div className="actors-page">
         <h1>Actors</h1>
-        <ActorCard />
+        <ActorCard movies={movies}/>
         </div>
      );
 }

@@ -19,8 +19,8 @@ return (
         <div>
         <NavBar user={user} />
         <Routes>
-          <Route path='/' element={<Movies />} />
-          <Route path='/actors' element={<Actors />} />
+          <Route path='/' element={<Movies movies={movies} />} />
+          <Route path='/actors' element={<Actors movies={movies} />} />
         </Routes>
         </div>
         ) : (
