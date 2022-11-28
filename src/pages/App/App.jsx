@@ -23,7 +23,7 @@ return (
         <Routes>
           <Route path='/' element={<Movies movies={movies}/>}/>
           <Route path='/actors' element={<Actors movies={movies}/>}/>
-          <Route path='/movies/:title' element={<MovieDetail movies={movies}/>}/>
+          <Route path={'/movies/:title'} element={<MovieDetail movies={movies}/>}/>
         </Routes>
         </div>
         ) : (
