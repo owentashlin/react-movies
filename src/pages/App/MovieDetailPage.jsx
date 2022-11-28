@@ -9,10 +9,10 @@ const MovieDetail = ({movies}) => {
           {movies.filter((movie) => movie.title === title)
               .map((movie) => (
                 <div>
-                  <img src={movie.posterPath}></img>
+                  <img className='detail-pic' src={movie.posterPath}></img>
                   <h2>{movie.title}</h2>
                   <h4>Realeased: {movie.releaseDate}</h4>
-                  <h3>Cast:</h3>
+                  <h2>Cast:</h2>
                     <ul>
                       {movie.cast.map(actor => {
                         return <li>{actor}</li>
