@@ -12,7 +12,12 @@ const MovieDetail = ({movies}) => {
                   <img src={movie.posterPath}></img>
                   <h2>{movie.title}</h2>
                   <h4>Realeased: {movie.releaseDate}</h4>
-                  <h3>Cast: {movie.cast}</h3>
+                  <h3>Cast:</h3>
+                    <ul>
+                      {movie.cast.map(actor => {
+                        return <li>{actor}</li>
+                      })}
+                    </ul>
                 </div>
               ))}
         </div>

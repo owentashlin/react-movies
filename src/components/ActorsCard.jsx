@@ -1,9 +1,15 @@
 import React from 'react'
 
-function ActorCard({cast}) {
+function getNum(min, max) {
+    return Math.round(Math.random()*(min-max)+min)
+}
+
+function ActorCard({actor}) {
+    let picNum = getNum(100, 400)
     return ( 
         <div className="movie-card">
-            <h3>{cast}</h3>
+            <img src={`https://picsum.photos/300/400/?${picNum}`}></img>
+            <h3>{actor}</h3>
         </div>
      )
 }
