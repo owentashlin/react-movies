@@ -1,18 +1,24 @@
-function MovieDetail() {
-    return ( 
-        <div className="detail-page">
-        <h1>Movie Title</h1>
-        <h4>
-            'Realeased: year'
-        </h4>
-        <h3>Cast Members:</h3>
-            <ul>
-                <li>Name</li>
-                <li>Name</li>
-            </ul>
-        <div>Movie Poster Image</div>
+import React from 'react'
+import { useParams } from 'react-router-dom'
+
+const MovieDetail = ({movies, posterPath}) => {
+  const {title} = useParams();
+
+  return (
+      <div className="detail-page">
+          {
+            movies
+              .filter((movie) => movie.title === title)
+              .map((movie) => (
+                <div className="full-card" key={movie.title}>
+                  <h2>Title: {movie.title}</h2>
+                  <h4>Realeased: {movie.releaseDate}</h4>
+                  <h3>Cast Members: {movie.cast}</h3>
+                  <img src={posterPath}></img>
+                </div>
+              ))}
         </div>
-     );
+  )
 }
 
-export default MovieDetail;
+export default MovieDetail

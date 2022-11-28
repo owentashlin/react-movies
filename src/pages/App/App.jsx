@@ -1,12 +1,14 @@
 import './App.css';
 import {useState} from 'react'
-import { Routes, Route } from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 
 import NavBar from '../../components/NavBar'
 import LoginPage from '../../components/LoginPage'
 import Movies from './MoviesListPage'
 import Actors from './ActorsListPage'
-import { movies } from "../../data.js"
+import {movies} from "../../data.js"
+import MovieDetail from './MovieDetailPage';
+
 
 
 function App() {
@@ -19,8 +21,9 @@ return (
         <div>
         <NavBar user={user} />
         <Routes>
-          <Route path='/' element={<Movies movies={movies} />} />
-          <Route path='/actors' element={<Actors movies={movies} />} />
+          <Route path='/' element={<Movies movies={movies}/>}/>
+          <Route path='/actors' element={<Actors movies={movies}/>}/>
+          <Route path='/movies/:title' element={<MovieDetail movies={movies}/>}/>
         </Routes>
         </div>
         ) : (
