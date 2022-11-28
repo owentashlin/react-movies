@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {movies} from '../data'
 
 function MovieCard({title, releaseDate, posterPath}) {
     return ( 

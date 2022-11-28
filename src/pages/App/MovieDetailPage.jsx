@@ -2,7 +2,8 @@ import React from 'react'
 import {useParams} from 'react-router-dom'
 
 const MovieDetail = ({movies}) => {
-  const {title} = useParams();
+  const {title} = useParams()
+
   return (
       <div className="detail-page">
           {movies.filter((movie) => movie.title === title)
