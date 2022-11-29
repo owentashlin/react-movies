@@ -16,7 +16,7 @@ function LoginPage({user, setUser}) {
         <div className="login-page">
         <h1>Login Page</h1>
         <form autoComplete="false" onSubmit={handleSubmit}>
-            <label>Email</label>
+            <label>Email: </label>
             <input type='email' value={email} onChange={e => setEmail(e.target.value)} required/>
             <button type="submit">
               Login

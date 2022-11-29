@@ -24,6 +24,7 @@ img {
   max-height: 450px;
   min-width: 50px;
   min-height: 75px;
+  border: 1px solid black;
 }
 
 .detail-pic {
@@ -70,4 +71,11 @@ ul {
   border: 1px dotted black;
   margin: auto;
   padding: 2px;
+  width: 300px;
+}
+
+button {
+  font-family:'Courier New', Courier, monospace;
+  font-weight: bold;
+  margin: 5px; 
 }
